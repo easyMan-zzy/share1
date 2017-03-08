@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>jsp demo</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/resources/demo.css}"/>   
+</head>
+ 
+<body>
+<h1>用户列表1</h1>
+<table border="1">
+<tr>
+<td>编号</td>
+<td>姓名</td>
+<td>工资</td>
+</tr>
+<tr th:each="user:${users}">
+<td th:text="${user.id}">1</td>
+<td th:text="${user.name}">lisi</td>
+<td th:text="${user.age}">30</td>
+</tr>
+</table>
+</body>
+</html>
